@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobenGate Sentinel — Documentación Oficial</title>
+  <meta name="description" content="Documentación técnica completa de RobenGate Sentinel, plataforma enterprise de ciberseguridad SIEM/SOC." />
+  <meta name="theme-color" content="#0A1929" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <!-- Marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js"></script>
+  
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Overlay mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Botón toggle mobile -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" title="Menú (Ctrl+Shift+D)">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- ==========================================
+  SIDEBAR
+  ========================================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Navegación de documentación">
+
+    <!-- Brand -->
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <i class="fas fa-shield-halved"></i>
+      </div>
+      <div class="brand-text">
+        <span>RobenGate</span>
+        <small>Sentinel · v2.0</small>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Cerrar menú">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Búsqueda -->
+    <div class="sidebar-search">
+      <i class="fas fa-search sidebar-search-icon"></i>
+      <input
+        type="search"
+        id="searchInput"
+        class="sidebar-search-input"
+        placeholder="Buscar documentación… (Ctrl+K)"
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="Buscar en la documentación"
+      />
+      <button class="search-clear" id="searchClear" aria-label="Limpiar búsqueda">
+        <i class="fas fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Navegación (generada por JavaScript) -->
+    <nav id="sidebarNav" aria-label="Secciones de documentación"></nav>
+
+    <!-- Footer sidebar -->
+    <div class="sidebar-footer">
+      <div class="sidebar-stats" id="sidebarStats"></div>
+      <p>© 2026 Robenson Louissaint</p>
+      <p class="license">MIT License · Código Abierto</p>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+  CONTENIDO PRINCIPAL
+  ========================================== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Header principal -->
+    <header class="main-header">
+      <div class="header-left">
+        <h1>
+          <i class="fas fa-shield-halved"></i>
+          RobenGate Sentinel
+          <span class="version-badge">v2.0.0</span>
+        </h1>
+        <p class="header-subtitle">Plataforma Enterprise de Ciberseguridad — Documentación Técnica Oficial</p>
+      </div>
+      <div class="header-right">
+        <a
+          href="https://github.com/Robensonl/robengate-sentinel"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-github"
+          title="Ver código fuente en GitHub"
+        >
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <button
+          class="btn-theme"
+          id="themeToggle"
+          aria-label="Cambiar tema oscuro/claro"
+          title="Cambiar tema"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Ruta de navegación">
+      <span><i class="fas fa-house"></i> Inicio</span>
+    </nav>
+
+    <!-- Área de contenido Markdown -->
+    <div class="content-wrapper">
+      <article class="content" id="contentArea" tabindex="-1">
+        <div class="loading-state">
+          <i class="fas fa-spinner fa-pulse"></i>
+          <p>Cargando documentación...</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Footer del contenido -->
+    <footer class="main-footer">
+      <p>
+        <i class="fas fa-shield-halved"></i>
+        RobenGate Sentinel — Documentación generada desde
+        <code>docs-es/</code>
+        · <span id="footerDocCount">159</span> documentos indexados
+      </p>
+      <p class="footer-meta">
+        Desarrollado por
+        <a href="https://www.linkedin.com/in/robensonlouissaint/" target="_blank" rel="noopener noreferrer">
+          Robenson Louissaint
+        </a>
+        · <i class="fas fa-code"></i> Código Abierto · MIT License
+        · <span id="footerYear"></span>
+      </p>
+    </footer>
+  </main>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver al inicio" title="Subir">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==========================================
+  SCRIPTS
+  ========================================== -->
+  <script src="js/mermaid-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
