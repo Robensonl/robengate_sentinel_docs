@@ -177,6 +177,7 @@
         { path: 'project-inventory/deployment-inventory.md',     label: 'Inventario Despliegue' },
       ],
     },
+    /* ── SECCIONES OCULTAS TEMPORALMENTE ──────────────────────────────────
     {
       id: 'negocio', label: 'Negocio & SaaS', icon: 'fa-briefcase',
       files: [
@@ -310,6 +311,7 @@
         { path: 'localization/translation-audit.md', label: 'Auditoría de Traducción' },
       ],
     },
+    ── FIN SECCIONES OCULTAS ──────────────────────────────────────────── */
   ];
 
   /* Total de documentos */
@@ -401,9 +403,12 @@
   }
 
   function setActiveLink(path) {
-    document.querySelectorAll('#sidebarNav .nav-link').forEach(a =>
-      a.classList.toggle('active', a.dataset.file === path)
-    );
+    document.querySelectorAll('#sidebarNav .nav-link').forEach(a => {
+      const isActive = a.dataset.file === path;
+      a.classList.toggle('active', isActive);
+      if (isActive) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
     /* Auto-expand the matching section */
     DOCS.forEach(sec => {
       if (sec.files.some(f => f.path === path) && !state.openSections.has(sec.id)) {
@@ -463,21 +468,31 @@
   // ============================================
   // CARGA DE DOCUMENTOS
   // ============================================
+  let _loadCtrl = null;
+
   async function loadDoc(path) {
     if (!path || path.startsWith('http')) return;
+    if (path === state.currentDoc) return; // evitar recarga innecesaria
+
+    /* Cancelar petición anterior si sigue en vuelo */
+    if (_loadCtrl) _loadCtrl.abort();
+    _loadCtrl = new AbortController();
 
     const area = $('contentArea');
     area.innerHTML = `<div class="loading-state">
       <i class="fas fa-spinner fa-pulse"></i><p>Cargando...</p></div>`;
 
     try {
-      const res = await fetch(`${CONFIG.BASE_PATH}${path}`, { cache: 'default' });
+      const res = await fetch(`${CONFIG.BASE_PATH}${path}`, {
+        cache: 'default',
+        signal: _loadCtrl.signal,
+      });
       if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
 
       const md = await res.text();
-      marked.setOptions({ gfm: true, breaks: false, pedantic: false });
       area.innerHTML = marked.parse(md);
 
+      addHeadingAnchors(area);
       await renderMermaid(area);
       addCopyBtns(area);
       interceptContentLinks(area);
@@ -490,6 +505,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
     } catch (err) {
+      if (err.name === 'AbortError') return; // ignorar petición cancelada
       console.error('loadDoc:', err);
       area.innerHTML = `
         <div class="error-state">
@@ -524,6 +540,26 @@
     if (!nodes.length) return;
     try { await mermaid.run({ nodes }); }
     catch (e) { console.warn('Mermaid:', e); }
+  }
+
+  function addHeadingAnchors(container) {
+    container.querySelectorAll('h1, h2, h3, h4').forEach(heading => {
+      const id = heading.textContent
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      if (!id) return;
+      heading.id = id;
+      const a = document.createElement('a');
+      a.className = 'heading-anchor';
+      a.href = `#${id}`;
+      a.tabIndex = -1;
+      a.setAttribute('aria-hidden', 'true');
+      a.innerHTML = '<i class="fas fa-link"></i>';
+      heading.appendChild(a);
+    });
   }
 
   function addCopyBtns(container) {
@@ -680,11 +716,19 @@
   }
 
   // ============================================
+  // MARKED.JS — CONFIGURACIÓN ÚNICA
+  // ============================================
+  function initMarked() {
+    marked.use({ gfm: true, breaks: false, pedantic: false });
+  }
+
+  // ============================================
   // INICIALIZACIÓN
   // ============================================
   function init() {
     applyTheme(state.isDark);
     buildSidebar();
+    initMarked(); // configurar marked.js una sola vez
 
     const clr = $('searchClear');
     if (clr) clr.style.display = 'none';
