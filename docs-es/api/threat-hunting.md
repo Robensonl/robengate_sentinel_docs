@@ -12,7 +12,7 @@ El módulo de Threat Hunting permite búsquedas avanzadas sobre logs de segurida
 
 ```mermaid
 graph LR
-    Analyst[Analista\nThreat Hunter] --> Search[/api/search]
+    Analyst[Analista\nThreat Hunter] --> Search["/api/search"]
     Search --> ES{Elasticsearch\nDisponible?}
     ES -->|Sí| ESIndex[(ES Index\nlogs)]
     ES -->|No| PG[(PostgreSQL\nsecurity_logs)]

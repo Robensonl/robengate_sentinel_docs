@@ -22,12 +22,12 @@ graph TB
     end
 
     subgraph "API Interna"
-        INT[POST /internal/honeypot/events\nX-Internal-Secret]
+        INT["POST /internal/honeypot/events\nX-Internal-Secret"]
         HONEY[Servicio Honeypot\nContenedor Docker aislado]
     end
 
     subgraph "Servicios Externos"
-        EMAIL[📧 Nodemailer\nSMTP (Gmail, Outlook, etc.)]
+        EMAIL["📧 Nodemailer\nSMTP (Gmail, Outlook, etc.)"]
         SMS[📱 Twilio\nSMS REST API]
         GEO_DB[🗺️ MaxMind GeoLite2\nBase de datos offline]
         WA[🔑 WebAuthn\nFIDO2 / Passkeys]

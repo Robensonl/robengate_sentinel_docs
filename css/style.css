@@ -482,7 +482,6 @@ a:hover {
   display: block;
   overflow-x: auto;
   border-radius: var(--radius-sm);
-  overflow: hidden;
 }
 
 .content table thead {
@@ -860,6 +859,7 @@ a:hover {
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
   z-index: 999;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   opacity: 0;
   transition: opacity var(--transition);
@@ -1280,4 +1280,32 @@ a:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 180, 216, 0.35);
+}
+
+/* ============================================
+   HEADING ANCHORS
+   ============================================ */
+.heading-anchor {
+  opacity: 0;
+  font-size: 0.6em;
+  color: var(--accent);
+  margin-left: 0.45rem;
+  vertical-align: middle;
+  transition: opacity 0.18s;
+  text-decoration: none !important;
+  font-weight: 400;
+}
+.content h1:hover .heading-anchor,
+.content h2:hover .heading-anchor,
+.content h3:hover .heading-anchor,
+.content h4:hover .heading-anchor {
+  opacity: 1;
+}
+[data-theme="dark"] .heading-anchor {
+  color: var(--accent-hover);
+}
+
+/* First child — remove top margin ============ */
+.content > *:first-child {
+  margin-top: 0 !important;
 }

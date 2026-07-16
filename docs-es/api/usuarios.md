@@ -14,7 +14,7 @@ El módulo de usuarios permite la gestión del ciclo de vida de las cuentas: lis
 graph LR
     Admin[Admin] -->|CRUD completo| API
     Analyst[Analyst] -->|Lista + consulta| API
-    API[/api/users] --> DB[(PostgreSQL\nusers)]
+    API["/api/users"] --> DB[(PostgreSQL\nusers)]
     style Admin fill:#dc2626,color:#fff
     style Analyst fill:#2563eb,color:#fff
 ```

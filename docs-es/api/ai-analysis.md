@@ -18,7 +18,7 @@ graph LR
     Engine --> Anomalies[Detección de Anomalías]
     Engine --> Patterns[Reconocimiento de Patrones]
     Engine --> Behavior[Análisis Comportamental]
-    Anomalies --> API[/api/ai/*]
+    Anomalies --> API["/api/ai/*"]
     Patterns --> API
     Behavior --> API
 ```

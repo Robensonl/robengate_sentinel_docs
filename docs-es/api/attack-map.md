@@ -122,7 +122,7 @@ El mapa de ataques usa `react-simple-maps` + `D3-Geo` para renderizar el mapa mu
 
 ```mermaid
 graph LR
-    API[/api/attack-map/recent] -->|WebSocket/SSE| Frontend
+    API["/api/attack-map/recent"] -->|WebSocket/SSE| Frontend
     Frontend -->|react-simple-maps| Map[Mapa Mundial]
     Map -->|Puntos de ataque| Dots[Círculos animados\npor severidad]
     API -->|/summary| Charts[Gráficos de barras\npor país]

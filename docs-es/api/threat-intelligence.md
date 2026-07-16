@@ -15,7 +15,7 @@ graph LR
     Honeypot[Honeypot] -->|Auto-enrich| TI
     VirusTotal[VirusTotal\nFeed - Roadmap] -->|Import| TI
     TI -->|Correlación| Events[Eventos entrantes]
-    TI -->|Lookup| Search[/api/search/ioc/:ip]
+    TI -->|Lookup| Search["/api/search/ioc/:ip"]
 ```
 
 ---

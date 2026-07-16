@@ -66,13 +66,13 @@ La capa frontend de RBAC solo controla la **experiencia de usuario** — qué bo
 
 ```mermaid
 flowchart TD
-    ROUTE[Navegación a ruta] --> PR[ProtectedRoute\nJWT válido?]
-    PR --> |No JWT| LOGIN[Redirect /login]
-    PR --> |JWT válido| ROLE_CHECK[meetsMinRole(minRole)]
-    ROLE_CHECK --> |Rol insuficiente| DENIED[AccessDenied /403]
+    ROUTE[Navegación a ruta] --> PR["ProtectedRoute\nJWT válido?"]
+    PR --> |No JWT| LOGIN["Redirect /login"]
+    PR --> |JWT válido| ROLE_CHECK["meetsMinRole(minRole)"]
+    ROLE_CHECK --> |Rol insuficiente| DENIED["AccessDenied /403"]
     ROLE_CHECK --> |Rol suficiente| PAGE[Renderizar página]
-    PAGE --> PG[PermissionGate\npor elemento UI]
-    PG --> |Sin permiso| READONLY[ReadOnlyBadge o null]
+    PAGE --> PG["PermissionGate\npor elemento UI"]
+    PG --> |Sin permiso| READONLY["ReadOnlyBadge o null"]
     PG --> |Con permiso| ELEMENT[Renderizar elemento]
 ```
 

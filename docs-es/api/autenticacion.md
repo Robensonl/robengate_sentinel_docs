@@ -600,7 +600,7 @@ Ver documento: [webauthn.md](webauthn.md) *(incluido en autenticacion)*
 graph LR
     AT[Access Token\n15 minutos\nJWT HS256] -->|Autentica| API[API endpoints]
     RT[Refresh Token\n7 días\nJWT HS256] -->|Rota| AT
-    PT[Pending Token\n5 minutos\nJWT HS256] -->|Solo MFA verify| MFA[/verify-otp\n/verify-backup-code]
+    PT[Pending Token\n5 minutos\nJWT HS256] -->|Solo MFA verify| MFA["/verify-otp\n/verify-backup-code"]
     
     style AT fill:#2563eb,color:#fff
     style RT fill:#7c3aed,color:#fff

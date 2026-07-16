@@ -18,7 +18,7 @@ flowchart TD
     subgraph Sources["Fuentes de Inteligencia"]
         MANUAL[Entrada Manual\nAnalista IOC]
         HONEYPOT[Honeypot Feed\nIPs atacantes]
-        EXTERNAL[Feeds Externos\n(roadmap)]
+        EXTERNAL["Feeds Externos\n(roadmap)"]
     end
 
     subgraph Storage["Almacenamiento"]

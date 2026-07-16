@@ -15,11 +15,11 @@ El threat hunting es la búsqueda **proactiva** de amenazas que pueden haber elu
 
 ```mermaid
 flowchart LR
-    Hypothesis[1. Formular hipótesis\n¿Qué amenaza podría estar\nhiddenamente presente?] --> Data[2. Recolectar datos\nLogs + IOCs + Threat Intel]
+    Hypothesis["1. Formular hipótesis\n¿Qué amenaza podría estar\nhiddenamente presente?"] --> Data["2. Recolectar datos\nLogs + IOCs + Threat Intel"]
     Data --> Hunt[3. Buscar evidencias\nPatrones + Anomalías]
-    Hunt --> Find{4. ¿Encontrado?}
-    Find -->|Sí| Respond[5. Responder\nIOC + Incidente]
-    Find -->|No| Tune[6. Afinar detección\nPlaybook/Rule]
+    Hunt --> Find{"4. ¿Encontrado?"}
+    Find -->|Sí| Respond["5. Responder\nIOC + Incidente"]
+    Find -->|No| Tune["6. Afinar detección\nPlaybook/Rule"]
     Tune --> Hypothesis
 ```
 

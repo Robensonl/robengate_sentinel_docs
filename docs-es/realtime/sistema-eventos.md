@@ -45,7 +45,7 @@ graph LR
     end
 
     subgraph "Transporte"
-        STREAM[GET /api/events?token=JWT\nConexión HTTP de larga duración\nContent-Type: text/event-stream]
+        STREAM["GET /api/events?token=JWT\nConexión HTTP de larga duración\nContent-Type: text/event-stream"]
     end
 
     subgraph "Frontend"

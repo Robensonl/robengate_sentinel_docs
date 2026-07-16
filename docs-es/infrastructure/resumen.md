@@ -38,10 +38,10 @@ graph TB
     ATK -->|HTTP :8080| HP
 
     NGINX -->|/api/*| BE
-    NGINX -->|/* (SPA)| FE
+    NGINX -->|SPA Route| FE
     
     BE --> REDIS & PG & MONGO
-    HP -->|API interna\n+ X-Internal-Secret| BE
+    HP -->|API interna + Secret| BE
     
     HP -.->|Sin acceso directo| PG
     HP -.->|Sin acceso directo| MONGO
