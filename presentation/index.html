@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobenGate Sentinel — Práctica Profesional IPP 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     SLIDESHOW CONTAINER
+═════════════════════════════════════════════ -->
+<div id="slideshow">
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 1 — PORTADA
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-1">
+    <!-- Logo -->
+    <div class="cover-logo">
+      <svg class="rs-shield" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RobenGate Sentinel Logo">
+        <path d="M55 8L14 24v28c0 22 17.5 42.5 41 50 23.5-7.5 41-28 41-50V24L55 8z" fill="url(#shield-grad)" stroke="#00B4D8" stroke-width="2"/>
+        <defs>
+          <linearGradient id="shield-grad" x1="14" y1="8" x2="96" y2="102" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0F2A4A"/>
+            <stop offset="100%" stop-color="#0A1929"/>
+          </linearGradient>
+        </defs>
+        <!-- RS Monogram -->
+        <text x="30" y="72" font-family="Montserrat, sans-serif" font-size="34" font-weight="800" fill="#00B4D8" letter-spacing="-1">RS</text>
+        <!-- Top shine -->
+        <path d="M55 8L14 24v6l41-15 41 15v-6L55 8z" fill="rgba(0,180,216,0.15)"/>
+      </svg>
+    </div>
+
+    <h1 class="cover-title"><span>RobenGate Sentinel</span> — Plataforma Enterprise de Ciberseguridad</h1>
+
+    <p class="cover-tagline">Práctica Profesional Voluntariado — IPP 2026</p>
+
+    <div class="cover-divider"></div>
+
+    <div class="cover-info-grid">
+      <div class="cover-info-item">
+        <div class="label">Presentado por</div>
+        <div class="value accent">Robenson Louissaint</div>
+      </div>
+      <div class="cover-info-item">
+        <div class="label">Carrera</div>
+        <div class="value">Ing. Informática — Ciberseguridad</div>
+      </div>
+      <div class="cover-info-item">
+        <div class="label">Bootcamp</div>
+        <div class="value">TripleTen — Full-Stack Web</div>
+      </div>
+      <div class="cover-info-item">
+        <div class="label">Tutor</div>
+        <div class="value">Jorge Tapia Gallardo</div>
+      </div>
+      <div class="cover-info-item">
+        <div class="label">Institución</div>
+        <div class="value">Instituto Profesional IPP</div>
+      </div>
+      <div class="cover-info-item">
+        <div class="label">Fecha</div>
+        <div class="value accent">Julio 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 2 — ÍNDICE
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-2">
+    <span class="slide-section-tag">Contenido</span>
+    <h2 class="slide-title">Índice de la <span>Presentación</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="index-grid">
+      <div class="index-item">
+        <span class="index-num">01</span>
+        <span class="index-icon">👤</span>
+        <span class="index-text">¿Quién soy?</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">02</span>
+        <span class="index-icon">🔴</span>
+        <span class="index-text">El Problema de la Ciberseguridad Hoy</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">03</span>
+        <span class="index-icon">🛡️</span>
+        <span class="index-text">¿Por qué RobenGate Sentinel?</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">04</span>
+        <span class="index-icon">🏗️</span>
+        <span class="index-text">Arquitectura del Sistema</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">05</span>
+        <span class="index-icon">⚙️</span>
+        <span class="index-text">Módulos Funcionales</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">06</span>
+        <span class="index-icon">🔐</span>
+        <span class="index-text">Seguridad Zero-Trust</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">07</span>
+        <span class="index-icon">🏆</span>
+        <span class="index-text">Resultados y Logros</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">08</span>
+        <span class="index-icon">💡</span>
+        <span class="index-text">Desafíos y Soluciones</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">09</span>
+        <span class="index-icon">🎓</span>
+        <span class="index-text">Aprendizajes y Competencias</span>
+      </div>
+      <div class="index-item">
+        <span class="index-num">10</span>
+        <span class="index-icon">🙏</span>
+        <span class="index-text">Agradecimientos y Contacto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 3 — ¿QUIÉN SOY?
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-3">
+    <div class="profile-col">
+      <div class="profile-avatar">RL</div>
+      <blockquote class="profile-quote">
+        "Construyo plataformas de seguridad enterprise para democratizar la ciberseguridad."
+      </blockquote>
+    </div>
+
+    <div class="info-col">
+      <span class="slide-section-tag">Sobre Mí</span>
+      <h2 class="profile-name">Robenson <span style="color:var(--accent)">Louissaint</span></h2>
+      <div class="accent-line"></div>
+
+      <div class="profile-item">
+        <span class="pi-icon">🎓</span>
+        <span class="pi-text"><strong>Ingeniería Informática, mención Ciberseguridad</strong><br>Instituto Profesional IPP — 2022–2026</span>
+      </div>
+      <div class="profile-item">
+        <span class="pi-icon">🚀</span>
+        <span class="pi-text"><strong>Bootcamp Desarrollo Web Full-Stack</strong><br>TripleTen — Certificado</span>
+      </div>
+      <div class="profile-item">
+        <span class="pi-icon">🔐</span>
+        <span class="pi-text"><strong>Creador de RobenGate Sentinel</strong><br>Plataforma SIEM/SOC enterprise de código abierto</span>
+      </div>
+      <div class="profile-item">
+        <span class="pi-icon">🌍</span>
+        <span class="pi-text"><strong>4 idiomas:</strong> Español · Francés · Inglés · Criollo Haitiano</span>
+      </div>
+      <div class="profile-item">
+        <span class="pi-icon">📍</span>
+        <span class="pi-text">Montreal, Quebec, Canadá</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 4 — EL PROBLEMA
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-4">
+    <span class="slide-section-tag">Contexto</span>
+    <h2 class="slide-title">El <span>Problema</span> de la Ciberseguridad Hoy</h2>
+    <div class="accent-line"></div>
+
+    <div class="problem-cards">
+      <!-- Card 1 -->
+      <div class="problem-card">
+        <div class="problem-card-header">
+          <div class="dot-red"></div>
+          <h3>Amenazas en Aumento</h3>
+        </div>
+        <div class="problem-stat">+300%</div>
+        <ul>
+          <li>Ransomware +300% en 2 años</li>
+          <li>Ataques a PYMEs +400%</li>
+          <li>Costo global: $10.5B en 2026</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="problem-card">
+        <div class="problem-card-header">
+          <div class="dot-red"></div>
+          <h3>Herramientas Inaccesibles</h3>
+        </div>
+        <div class="problem-stat">$200K/año</div>
+        <ul>
+          <li>Splunk / QRadar: $50K–$200K/año</li>
+          <li>Solo 15% de PYMEs tienen SIEM</li>
+          <li>Barrera de entrada altísima</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="problem-card">
+        <div class="problem-card-header">
+          <div class="dot-red"></div>
+          <h3>Falta de Visibilidad</h3>
+        </div>
+        <div class="problem-stat">0%</div>
+        <ul>
+          <li>Logs dispersos sin centralización</li>
+          <li>Respuesta manual y lenta</li>
+          <li>Sin correlación de eventos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="opportunity-banner">
+      💡 Oportunidad: Democratizar la seguridad enterprise — accesible para todos
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 5 — LA SOLUCIÓN
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-5">
+    <span class="slide-section-tag">La Solución</span>
+    <h2 class="slide-title"><span>RobenGate Sentinel</span> — Plataforma SIEM/SOC</h2>
+    <div class="accent-line"></div>
+
+    <div class="solution-layout">
+      <!-- Logo & Badges -->
+      <div class="solution-logo-col">
+        <svg class="rs-shield-lg" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M55 8L14 24v28c0 22 17.5 42.5 41 50 23.5-7.5 41-28 41-50V24L55 8z" fill="url(#shield-grad2)" stroke="#00B4D8" stroke-width="2"/>
+          <defs>
+            <linearGradient id="shield-grad2" x1="14" y1="8" x2="96" y2="102" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0F2A4A"/>
+              <stop offset="100%" stop-color="#0A1929"/>
+            </linearGradient>
+          </defs>
+          <text x="30" y="72" font-family="Montserrat, sans-serif" font-size="34" font-weight="800" fill="#00B4D8" letter-spacing="-1">RS</text>
+          <path d="M55 8L14 24v6l41-15 41 15v-6L55 8z" fill="rgba(0,180,216,0.15)"/>
+        </svg>
+
+        <div class="badges">
+          <div class="badge">#ProductionReady</div>
+          <div class="badge">#OpenSource</div>
+          <div class="badge">#ZeroTrust</div>
+          <div class="badge">#OWASP SAMM Level 4</div>
+        </div>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="solution-features">
+        <div class="feature-item">
+          <span class="fi-icon">✅</span>
+          <span class="fi-text">Plataforma SIEM/SOC todo-en-uno</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">🔐</span>
+          <span class="fi-text">Seguridad Zero-Trust (JWT + MFA + WebAuthn)</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">🍯</span>
+          <span class="fi-text">Honeypot SSH:2222 + HTTP:8080</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">⚡</span>
+          <span class="fi-text">SOAR Automatizado — Playbooks</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">🧠</span>
+          <span class="fi-text">AI Analysis — Motor de Riesgo</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">📊</span>
+          <span class="fi-text">Security Score: 85/100 (OWASP SAMM)</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">☸️</span>
+          <span class="fi-text">VPS → Docker → Kubernetes → Helm</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-icon">📦</span>
+          <span class="fi-text">Open Source en GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 6 — ARQUITECTURA
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-6">
+    <span class="slide-section-tag">Técnico</span>
+    <h2 class="slide-title">Arquitectura del <span>Sistema</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="arch-layers">
+      <div class="arch-layer color-gray">
+        <span class="arch-icon">🌐</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">INTERNET — Analista SOC</div>
+          <div class="layer-detail">Conexión HTTPS :443 · Acceso desde cualquier navegador moderno</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓</div>
+
+      <div class="arch-layer color-cyan">
+        <span class="arch-icon">🔀</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">NGINX PROXY — Balanceo de Carga</div>
+          <div class="layer-detail">TLS 1.2/1.3 · HSTS · CSP · Rate Limiting · Reverse Proxy</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓</div>
+
+      <div class="arch-layer color-green">
+        <span class="arch-icon">🖥️</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">FRONTEND — React 19 + Vite 5</div>
+          <div class="layer-detail">Dashboard SOC · Attack Map · Alertas · Incidentes · RBAC UI</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓</div>
+
+      <div class="arch-layer color-blue">
+        <span class="arch-icon">⚙️</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">BACKEND — Node.js 20 + Express 4</div>
+          <div class="layer-detail">102 endpoints REST · JWT / MFA / WebAuthn · SIEM Core · SOAR Engine · AI Analysis</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓</div>
+
+      <div class="arch-layer color-orange">
+        <span class="arch-icon">🗄️</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">DATOS — Polyglot Database</div>
+          <div class="layer-detail">PostgreSQL 16 (usuarios, logs) · MongoDB 7 (auditoría) · Redis 7 (cache, sesiones)</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓</div>
+
+      <div class="arch-layer color-purple">
+        <span class="arch-icon">📊</span>
+        <div class="arch-layer-content">
+          <div class="layer-name">OBSERVABILIDAD — Stack Completo</div>
+          <div class="layer-detail">Prometheus (métricas) · Grafana (dashboards) · Alertmanager (alertas)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 7 — MÓDULOS FUNCIONALES
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-7">
+    <span class="slide-section-tag">Funcionalidades</span>
+    <h2 class="slide-title">Módulos <span>Funcionales</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-icon">🛡️</div>
+        <div class="module-name">Dashboard SOC</div>
+        <div class="module-desc">Métricas tiempo real, KPIs, gráficos interactivos</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🔍</div>
+        <div class="module-name">SIEM</div>
+        <div class="module-desc">Correlación de eventos, pipeline de ingesta de logs</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🧠</div>
+        <div class="module-name">Threat Intelligence</div>
+        <div class="module-desc">Gestión de IOCs, feeds de amenazas automatizados</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🍯</div>
+        <div class="module-name">Honeypot</div>
+        <div class="module-desc">SSH :2222 + HTTP :8080 — captura de atacantes reales</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">⚡</div>
+        <div class="module-name">SOAR</div>
+        <div class="module-desc">Playbooks automáticos, bloqueo de IP en tiempo real</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🤖</div>
+        <div class="module-name">AI Analysis</div>
+        <div class="module-desc">Detección de anomalías, Risk Engine adaptativo</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">📊</div>
+        <div class="module-name">Attack Map</div>
+        <div class="module-desc">Geolocalización de ataques, streaming en tiempo real</div>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">👤</div>
+        <div class="module-name">RBAC</div>
+        <div class="module-desc">4 roles: admin · analyst · responder · viewer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 8 — SEGURIDAD ZERO-TRUST
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-8">
+    <span class="slide-section-tag">Seguridad</span>
+    <h2 class="slide-title">Seguridad <span>Zero-Trust</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="zt-layout">
+      <!-- Left Column -->
+      <div>
+        <!-- JWT & MFA -->
+        <div class="zt-info-card" style="margin-bottom:16px">
+          <div class="zt-section-title">🔐 Autenticación Multi-Capa</div>
+          <ul class="zt-list">
+            <li>JWT access token (15 min) + refresh (7 días)</li>
+            <li>MFA — TOTP (Google Authenticator)</li>
+            <li>MFA — Email / SMS</li>
+            <li>WebAuthn / FIDO2 (passkeys)</li>
+            <li>Motor de Riesgo Adaptativo — 10 señales</li>
+          </ul>
+        </div>
+
+        <!-- RBAC -->
+        <div class="zt-info-card">
+          <div class="zt-section-title">👥 RBAC — Jerarquía de Roles</div>
+          <div class="rbac-chain">
+            <span class="rbac-role admin">Admin (4)</span>
+            <span class="rbac-arrow">→</span>
+            <span class="rbac-role analyst">Analyst (3)</span>
+            <span class="rbac-arrow">→</span>
+            <span class="rbac-role responder">Responder (2)</span>
+            <span class="rbac-arrow">→</span>
+            <span class="rbac-role viewer">Viewer (1)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <!-- OWASP Badge -->
+        <div class="owasp-badge" style="margin-bottom:16px;width:100%">
+          <div class="score">85/100</div>
+          <div class="label">
+            <strong>OWASP SAMM Score</strong>
+            Level 4 — Enterprise Grade Security
+          </div>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="zt-info-card">
+          <div class="zt-section-title">📊 Scores por Dimensión</div>
+          <div class="progress-rows">
+            <div class="progress-row">
+              <div class="progress-row-header">
+                <span class="pr-name">Autenticación</span>
+                <span class="pr-val">91/100</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" data-width="91%"></div>
+              </div>
+            </div>
+            <div class="progress-row">
+              <div class="progress-row-header">
+                <span class="pr-name">Backend API</span>
+                <span class="pr-val">91/100</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" data-width="91%"></div>
+              </div>
+            </div>
+            <div class="progress-row">
+              <div class="progress-row-header">
+                <span class="pr-name">Frontend</span>
+                <span class="pr-val">87/100</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" data-width="87%"></div>
+              </div>
+            </div>
+            <div class="progress-row">
+              <div class="progress-row-header">
+                <span class="pr-name">Infraestructura</span>
+                <span class="pr-val">82/100</span>
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" data-width="82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 9 — RESULTADOS Y LOGROS
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-9">
+    <span class="slide-section-tag">Logros</span>
+    <h2 class="slide-title">Resultados y <span>Logros</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-icon">🏆</div>
+        <div class="result-number" data-target="85" data-suffix="/100">0/100</div>
+        <div class="result-label">OWASP SAMM Level 4<br>Security Score</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">📊</div>
+        <div class="result-number" data-target="102">0</div>
+        <div class="result-label">Endpoints API REST<br>documentados</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">⚙️</div>
+        <div class="result-number" data-target="22">0</div>
+        <div class="result-label">Módulos Backend<br>implementados</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🎨</div>
+        <div class="result-number" data-target="11">0</div>
+        <div class="result-label">Módulos Frontend<br>React</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">📄</div>
+        <div class="result-number" data-target="159">0</div>
+        <div class="result-label">Documentos Técnicos<br>en 27 categorías</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🗄️</div>
+        <div class="result-number" data-target="3">0</div>
+        <div class="result-label">Bases de Datos<br>PostgreSQL · MongoDB · Redis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 10 — DESAFÍOS Y SOLUCIONES
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-10">
+    <span class="slide-section-tag">Retos</span>
+    <h2 class="slide-title">Desafíos y <span>Soluciones</span></h2>
+    <div class="accent-line"></div>
+
+    <table class="challenges-table">
+      <thead>
+        <tr>
+          <th>⚠️ Desafío</th>
+          <th>✅ Solución Implementada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="challenge">Correlación de eventos en tiempo real</td>
+          <td class="solution">Server-Sent Events (SSE) — streaming live</td>
+        </tr>
+        <tr>
+          <td class="challenge">Autenticación multifactor segura</td>
+          <td class="solution">4 canales: TOTP · Email · SMS · WebAuthn/FIDO2</td>
+        </tr>
+        <tr>
+          <td class="challenge">Despliegue reproducible en contenedores</td>
+          <td class="solution">Docker Compose + Kubernetes + Helm Charts</td>
+        </tr>
+        <tr>
+          <td class="challenge">Documentación técnica extensa</td>
+          <td class="solution">159 documentos estructurados en 27 categorías</td>
+        </tr>
+        <tr>
+          <td class="challenge">Detección de amenazas automatizada</td>
+          <td class="solution">AI Risk Engine con 10 señales adaptativas</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 11 — APRENDIZAJES
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-11">
+    <span class="slide-section-tag">Competencias</span>
+    <h2 class="slide-title">Aprendizajes y <span>Competencias</span></h2>
+    <div class="accent-line"></div>
+
+    <div class="learnings-grid">
+      <div class="learning-card">
+        <span class="learning-icon">🏗️</span>
+        <span class="learning-title">Ingeniería de software enterprise</span>
+      </div>
+      <div class="learning-card">
+        <span class="learning-icon">🔐</span>
+        <span class="learning-title">Ciberseguridad aplicada — Zero-Trust, MFA, WebAuthn</span>
+      </div>
+      <div class="learning-card">
+        <span class="learning-icon">☁️</span>
+        <span class="learning-title">Cloud-native — Docker, Kubernetes, Helm</span>
+      </div>
+      <div class="learning-card">
+        <span class="learning-icon">🔄</span>
+        <span class="learning-title">DevSecOps y automatización de seguridad</span>
+      </div>
+      <div class="learning-card">
+        <span class="learning-icon">📝</span>
+        <span class="learning-title">Documentación técnica profesional (159 docs)</span>
+      </div>
+      <div class="learning-card">
+        <span class="learning-icon">🤖</span>
+        <span class="learning-title">Inteligencia Artificial aplicada a ciberseguridad</span>
+      </div>
+    </div>
+
+    <blockquote class="closing-quote">
+      "Construir RobenGate Sentinel me permitió integrar todos los conocimientos del bootcamp en un sistema
+      de seguridad real y production-ready — desde la autenticación hasta el despliegue en Kubernetes."
+    </blockquote>
+
+    <div class="next-step">
+      💡 Siguiente paso: Evolucionar RobenGate Sentinel hacia SaaS multi-tenant
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SLIDE 12 — AGRADECIMIENTOS Y CONTACTO
+  ══════════════════════════════════════════ -->
+  <section class="slide" id="slide-12">
+    <!-- Logo -->
+    <div class="closing-logo">
+      <svg width="90" height="90" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="RobenGate Sentinel Logo">
+        <path d="M55 8L14 24v28c0 22 17.5 42.5 41 50 23.5-7.5 41-28 41-50V24L55 8z" fill="url(#shield-grad3)" stroke="#00B4D8" stroke-width="2"/>
+        <defs>
+          <linearGradient id="shield-grad3" x1="14" y1="8" x2="96" y2="102" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0F2A4A"/>
+            <stop offset="100%" stop-color="#0A1929"/>
+          </linearGradient>
+        </defs>
+        <text x="30" y="72" font-family="Montserrat, sans-serif" font-size="34" font-weight="800" fill="#00B4D8" letter-spacing="-1">RS</text>
+        <path d="M55 8L14 24v6l41-15 41 15v-6L55 8z" fill="rgba(0,180,216,0.15)"/>
+      </svg>
+    </div>
+
+    <h2 class="closing-thanks">🙏 Gracias por su <span>atención</span></h2>
+    <p class="closing-sub">RobenGate Sentinel — Práctica Profesional Voluntariado · IPP 2026 · Robenson Louissaint</p>
+
+    <div class="closing-grid">
+      <!-- Agradecimientos -->
+      <div class="closing-col">
+        <div class="closing-section-label">Agradecimientos</div>
+        <ul class="thanks-list">
+          <li><strong style="color:var(--text-primary)">Jorge Tapia Gallardo</strong> — Tutor IPP</li>
+          <li>Instituto Profesional IPP</li>
+          <li>Bootcamp TripleTen</li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="closing-col">
+        <div class="closing-section-label">Contacto</div>
+        <ul class="contact-list">
+          <li>
+            <span class="c-icon">📧</span>
+            <a href="mailto:robenson.louissaint.dev@gmail.com">robenson.louissaint.dev@gmail.com</a>
+          </li>
+          <li>
+            <span class="c-icon">🔗</span>
+            <a href="https://linkedin.com/in/robensonlouissaint" target="_blank" rel="noopener noreferrer">linkedin.com/in/robensonlouissaint</a>
+          </li>
+          <li>
+            <span class="c-icon">🐙</span>
+            <a href="https://github.com/Robensonl" target="_blank" rel="noopener noreferrer">github.com/Robensonl</a>
+          </li>
+          <li>
+            <span class="c-icon">🛡️</span>
+            <a href="https://github.com/Robensonl/robengate-sentinel" target="_blank" rel="noopener noreferrer">github.com/Robensonl/robengate-sentinel</a>
+          </li>
+          <li>
+            <span class="c-icon">📍</span>
+            <span style="color:var(--text-secondary)">Montreal, Quebec, Canadá</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div><!-- #slideshow -->
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION BAR
+═════════════════════════════════════════════ -->
+<nav id="nav-bar" aria-label="Navegación de diapositivas">
+  <button id="btn-prev" aria-label="Diapositiva anterior">← Anterior</button>
+
+  <div id="progress-dots" role="tablist" aria-label="Indicadores de diapositiva">
+    <div class="dot active" data-slide="1" role="tab" aria-label="Slide 1" tabindex="0"></div>
+    <div class="dot" data-slide="2" role="tab" aria-label="Slide 2" tabindex="0"></div>
+    <div class="dot" data-slide="3" role="tab" aria-label="Slide 3" tabindex="0"></div>
+    <div class="dot" data-slide="4" role="tab" aria-label="Slide 4" tabindex="0"></div>
+    <div class="dot" data-slide="5" role="tab" aria-label="Slide 5" tabindex="0"></div>
+    <div class="dot" data-slide="6" role="tab" aria-label="Slide 6" tabindex="0"></div>
+    <div class="dot" data-slide="7" role="tab" aria-label="Slide 7" tabindex="0"></div>
+    <div class="dot" data-slide="8" role="tab" aria-label="Slide 8" tabindex="0"></div>
+    <div class="dot" data-slide="9" role="tab" aria-label="Slide 9" tabindex="0"></div>
+    <div class="dot" data-slide="10" role="tab" aria-label="Slide 10" tabindex="0"></div>
+    <div class="dot" data-slide="11" role="tab" aria-label="Slide 11" tabindex="0"></div>
+    <div class="dot" data-slide="12" role="tab" aria-label="Slide 12" tabindex="0"></div>
+  </div>
+
+  <span id="progress-indicator" aria-live="polite" aria-atomic="true">1 / 12</span>
+
+  <button id="btn-next" aria-label="Siguiente diapositiva">Siguiente →</button>
+
+  <button id="btn-fullscreen" title="Pantalla completa (F)">⛶ Pantalla Completa</button>
+  <button id="btn-pdf" title="Exportar a PDF (Ctrl+P)">⬇ Exportar PDF</button>
+</nav>
+
+<!-- Scripts -->
+<script src="animations.js"></script>
+</body>
+</html>
