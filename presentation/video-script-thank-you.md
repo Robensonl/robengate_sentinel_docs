@@ -7,7 +7,7 @@
 
 Hola a todos. [PAUSE]
 Mi nombre es **Robenson Louissaint**. [PAUSE]
-Soy **software engineer from Haiti**. [PAUSE]
+I am a **software engineer from Haiti**. [PAUSE]
 Y hoy quiero decir, de corazón, **gracias**. [PAUSE]
 
 Este momento es muy importante para mí. [PAUSE]
@@ -32,7 +32,7 @@ Your encouragement truly mattered. [PAUSE]
 Cada palabra positiva me ayudó a seguir adelante. [PAUSE]
 
 Mi recorrido ha sido intenso y transformador. [PAUSE]
-Completé **4 años de Ingeniería Informática mención Ciberseguridad en IPP**. [PAUSE]
+Completé **4 años de Ingeniería Informática con mención en Ciberseguridad en IPP**. [PAUSE]
 Después, seguí con **1 año de formación intensiva en TripleTen**. [PAUSE]
 And with that knowledge, I built **RobenGate Sentinel**. [PAUSE]
 Una plataforma enterprise de ciberseguridad que representa aprendizaje, visión y compromiso. [PAUSE]
